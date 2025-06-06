@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Scale } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Header: React.FC = () => {
@@ -41,7 +41,17 @@ const Header: React.FC = () => {
       <div className="container-custom">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
-            <span className="text-primary font-serif text-xl md:text-2xl font-bold">Seema Vishwakarma & Associates</span>
+            <div className="flex items-center">
+              <Scale className="h-8 w-8 text-secondary mr-3" />
+              <div>
+                <span className="text-primary font-serif text-lg md:text-xl font-bold block leading-tight">
+                  Seema Vishwakarma & Associates
+                </span>
+                <span className="text-secondary text-xs md:text-sm font-medium">
+                  M.Com., L.L.B. - High Court Advocates
+                </span>
+              </div>
+            </div>
           </Link>
           
           <nav className="hidden md:flex space-x-8">

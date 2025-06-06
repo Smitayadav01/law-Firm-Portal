@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Scale } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -8,11 +8,17 @@ const Footer: React.FC = () => {
       <div className="container-custom py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4 text-white">Seema Vishwakarma & Associates</h3>
+            <div className="flex items-center mb-4">
+              <Scale className="h-8 w-8 text-secondary mr-3" />
+              <div>
+                <h3 className="text-xl font-bold text-white">Seema Vishwakarma & Associates</h3>
+                <p className="text-secondary text-sm">M.Com., L.L.B.</p>
+              </div>
+            </div>
             <p className="mb-4 text-gray-300">
-              High Court Advocates with expertise in various areas of law.
+              High Court Advocates providing professional legal services with integrity and dedication.
             </p>
-            <p className="text-gray-300">M.Com., L.L.B.</p>
+            <p className="text-gray-300 font-semibold">ADVOCATES HIGH COURT</p>
           </div>
 
           <div>
@@ -42,7 +48,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-bold mb-4 text-white">Contact Us</h4>
+            <h4 className="text-lg font-bold mb-4 text-white">Contact Information</h4>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin size={20} className="mt-1 mr-3 flex-shrink-0 text-secondary" />
@@ -71,6 +77,9 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-300">
               &copy; {new Date().getFullYear()} Seema Vishwakarma & Associates. All rights reserved.
+            </p>
+            <p className="text-sm text-gray-300 mt-2 md:mt-0">
+              Professional Legal Services | High Court Advocates
             </p>
           </div>
         </div>
