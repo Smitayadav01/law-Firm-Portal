@@ -29,25 +29,30 @@ const Header: React.FC = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Practice Areas', href: '/practice-areas' },
+    { name: 'Team', href: '/team' },
     { name: 'Contact', href: '/contact' },
   ];
 
   return (
     <header 
       className={`fixed w-full z-30 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+        scrolled ? 'bg-white shadow-professional py-2' : 'bg-transparent py-4'
       }`}
     >
       <div className="container-custom">
         <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center hover-lift">
             <div className="flex items-center">
-              <Scale className="h-8 w-8 text-secondary mr-3" />
+              <div className="bg-navy p-2 rounded-full mr-3">
+                <Scale className="h-6 w-6 text-gold" />
+              </div>
               <div>
-                <span className="text-primary font-serif text-lg md:text-xl font-bold block leading-tight">
+                <span className={`font-serif text-lg md:text-xl font-bold block leading-tight transition-colors ${
+                  scrolled ? 'text-navy' : 'text-white'
+                }`}>
                   Seema Vishwakarma & Associates
                 </span>
-                <span className="text-secondary text-xs md:text-sm font-medium">
+                <span className="text-gold text-xs md:text-sm font-medium">
                   M.Com., L.L.B. - High Court Advocates
                 </span>
               </div>
@@ -59,13 +64,16 @@ const Header: React.FC = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-secondary ${
+                className={`text-sm font-medium transition-all duration-200 hover:text-gold relative group ${
                   location.pathname === item.href 
-                    ? 'text-secondary border-b-2 border-secondary' 
-                    : 'text-gray-700'
+                    ? 'text-gold' 
+                    : scrolled ? 'text-navy' : 'text-white'
                 }`}
               >
                 {item.name}
+                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full ${
+                  location.pathname === item.href ? 'w-full' : ''
+                }`}></span>
               </Link>
             ))}
           </nav>
@@ -73,7 +81,7 @@ const Header: React.FC = () => {
           <div className="hidden md:block">
             <Link
               to="/contact"
-              className="btn btn-primary"
+              className="btn bg-gold hover:bg-gold-light text-white"
             >
               Contact Us
             </Link>
@@ -82,7 +90,9 @@ const Header: React.FC = () => {
           <div className="md:hidden">
             <button
               type="button"
-              className="text-gray-700 hover:text-primary focus:outline-none"
+              className={`transition-colors hover:text-gold focus:outline-none ${
+                scrolled ? 'text-navy' : 'text-white'
+              }`}
               onClick={toggleMenu}
             >
               {isOpen ? (
@@ -103,15 +113,15 @@ const Header: React.FC = () => {
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-white shadow-professional-lg">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                   location.pathname === item.href
-                    ? 'text-secondary bg-gray-50'
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-primary'
+                    ? 'text-gold bg-gray-50'
+                    : 'text-navy hover:bg-gray-50 hover:text-gold'
                 }`}
               >
                 {item.name}
@@ -119,7 +129,7 @@ const Header: React.FC = () => {
             ))}
             <Link
               to="/contact"
-              className="block w-full text-center px-3 py-2 rounded-md text-base font-medium btn btn-primary"
+              className="block w-full text-center px-3 py-2 rounded-md text-base font-medium btn bg-gold hover:bg-gold-light text-white mt-4"
             >
               Contact Us
             </Link>

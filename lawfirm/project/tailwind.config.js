@@ -4,13 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          light: 'hsl(var(--primary-light))',
+        navy: {
+          DEFAULT: 'hsl(var(--navy))',
+          light: 'hsl(var(--navy-light))',
         },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          light: 'hsl(var(--secondary-light))',
+        gold: {
+          DEFAULT: 'hsl(var(--gold))',
+          light: 'hsl(var(--gold-light))',
         },
         accent: {
           DEFAULT: 'hsl(var(--accent))',
@@ -54,7 +54,10 @@ export default {
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
-        'fade-in-up': 'fadeInUp 0.5s ease-out',
+        'fade-in-up': 'fadeInUp 0.6s ease-out',
+        'scale-in': 'scaleIn 0.3s ease-out',
+        'slide-in-left': 'slideInLeft 0.6s ease-out',
+        'slide-in-right': 'slideInRight 0.6s ease-out',
       },
       keyframes: {
         fadeIn: {
@@ -62,9 +65,30 @@ export default {
           '100%': { opacity: '1' },
         },
         fadeInUp: {
-          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '0%': { opacity: '0', transform: 'translateY(30px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.9)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        slideInLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-30px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        slideInRight: {
+          '0%': { opacity: '0', transform: 'translateX(30px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+      },
+      boxShadow: {
+        'professional': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+        'professional-lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+        'gold-glow': '0 0 20px rgba(255, 215, 0, 0.3)',
+        'navy-glow': '0 0 20px rgba(15, 23, 42, 0.3)',
+      },
+      backdropBlur: {
+        xs: '2px',
       },
     },
   },
