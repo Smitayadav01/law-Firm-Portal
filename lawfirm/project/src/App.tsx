@@ -4,7 +4,6 @@ import Layout from './components/Layout/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
 import PracticeAreas from './pages/PracticeAreas';
-import Team from './pages/Team';
 import Contact from './pages/Contact';
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/practice-areas" element={<PracticeAreas />} />
-          <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Layout>
