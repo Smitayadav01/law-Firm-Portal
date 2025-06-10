@@ -24,8 +24,8 @@ const About: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">About Our Firm</h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">About Our Firm</h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Professional legal excellence with integrity and dedication to client success.
             </p>
           </motion.div>
@@ -68,7 +68,7 @@ const About: React.FC = () => {
               className="relative"
             >
               <img
-                src="https://images.pexels.com/photos/8112656/pexels-photo-8112656.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1920"
                 alt="Law firm"
                 className="rounded-lg shadow-lg w-full h-auto"
               />
@@ -250,12 +250,12 @@ const About: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold text-white mb-4">Schedule Your Legal Consultation</h2>
-              <p className="text-gray-300 mb-8">
+              <h2 className="text-3xl font-bold text-black mb-4">Schedule Your Legal Consultation</h2>
+              <p className="text-gray-600 mb-8">
                 Contact us today to discuss your legal needs and discover how our experienced team can assist you 
                 in achieving your objectives with professional excellence.
               </p>
-              <Link to="/contact" className="btn bg-secondary hover:bg-secondary-light text-white">
+              <Link to="/contact" className="btn bg-secondary hover:bg-secondary-light text-black">
                 Contact Us Today
               </Link>
             </motion.div>

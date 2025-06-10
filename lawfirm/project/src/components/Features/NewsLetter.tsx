@@ -43,8 +43,9 @@ const Newsletter: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">Stay Informed</h2>
-            <p className="text-gray-200 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4 text-navy">Stay Informed</h2>
+          <div className="w-20 h-1 bg-gold mx-auto mb-6"></div>
+            <p className="text-gray-500 max-w-2xl mx-auto">
               Subscribe to our newsletter for the latest legal updates, insights, and news that matter to you.
             </p>
           </motion.div>
@@ -110,7 +111,7 @@ const Newsletter: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="btn bg-primary hover:bg-primary-light text-white px-8 py-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="btn bg-primary hover:bg-primary-light text-black px-8 py-3 disabled:opacity-50 disabled:cursor-not-allowed border-black"
                   >
                     {isSubmitting ? 'Subscribing...' : 'Subscribe Now'}
                   </button>

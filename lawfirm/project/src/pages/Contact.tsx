@@ -16,7 +16,6 @@ const Contact: React.FC = () => {
   
   const onSubmit = (data: FormData) => {
     console.log(data);
-    // In a real application, you would handle form submission here
   };
 
   return (
@@ -31,8 +30,8 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Contact Us</h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold text-balck mb-4">Contact Us</h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Get in touch with our legal experts for consultation and assistance.
             </p>
           </motion.div>
