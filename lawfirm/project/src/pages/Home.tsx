@@ -30,9 +30,9 @@ const Home: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-navy overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center gradient-peacock overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10"></div>
-        <div className="absolute inset-0 gradient-navy"></div>
+        <div className="absolute inset-0 gradient-peacock"></div>
         
         {/* Decorative Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 border-2 border-gold/30 rounded-full"></div>
@@ -53,12 +53,9 @@ const Home: React.FC = () => {
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 font-serif">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 font-serif krishna-flute-underline">
               Seema Vishwakarma & Associates
             </h1>
-            <p className="text-2xl text-gold mb-2 font-semibold">
-              M.Com., L.L.B.
-            </p>
             <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               <span className="text-gold font-semibold">ADVOCATES HIGH COURT</span><br />
@@ -128,19 +125,24 @@ const Home: React.FC = () => {
           >
             {[
               {
-                title: "Civil Law",
-                icon: <Scale className="h-10 w-10 text-gold mb-4" />,
-                description: "Expert representation in civil matters, property disputes, and contractual issues."
-              },
-              {
                 title: "Criminal Law",
-                icon: <Award className="h-10 w-10 text-gold mb-4" />,
+                icon: <Scale className="h-10 w-10 text-gold mb-4" />,
                 description: "Comprehensive defense in criminal cases with strategic legal representation."
               },
               {
                 title: "Family Law",
                 icon: <Users className="h-10 w-10 text-gold mb-4" />,
                 description: "Sensitive handling of family matters including divorce, custody, and matrimonial disputes."
+              },
+              {
+                title: "Cyber Law",
+                icon: <Shield className="h-10 w-10 text-gold mb-4" />,
+                description: "Expert guidance in cyber crimes, data protection, and digital legal matters."
+              },
+              {
+                title: "Civil Law",
+                icon: <Scale className="h-10 w-10 text-gold mb-4" />,
+                description: "Expert representation in civil matters, property disputes, and contractual issues."
               },
               {
                 title: "Property Law",
@@ -151,11 +153,6 @@ const Home: React.FC = () => {
                 title: "Corporate Law",
                 icon: <BarChart3 className="h-10 w-10 text-gold mb-4" />,
                 description: "Business legal services including company formation, compliance, and commercial disputes."
-              },
-              {
-                title: "Consumer Protection",
-                icon: <Shield className="h-10 w-10 text-gold mb-4" />,
-                description: "Advocacy for consumer rights and protection against unfair trade practices."
               }
             ].map((area, index) => (
               <motion.div
@@ -189,7 +186,7 @@ const Home: React.FC = () => {
               <h2 className="text-3xl font-bold mb-4 text-navy">About Seema Vishwakarma & Associates</h2>
               <div className="w-20 h-1 bg-gold mb-6"></div>
               <p className="text-gray-600 mb-6">
-                Seema Vishwakarma & Associates is a distinguished law firm led by Advocate Seema Vishwakarma, M.Com., L.L.B., 
+                Seema Vishwakarma & Associates is a distinguished law firm led by Advocate Seema Vishwakarma, 
                 practicing as High Court Advocates with extensive experience in various areas of law.
               </p>
               <p className="text-gray-600 mb-6">
@@ -347,7 +344,7 @@ const Home: React.FC = () => {
               transition={{ duration: 0.6 }}
             >
               <img
-                src="https://images.pexels.com/photos/5668482/pexels-photo-5668482.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src="https://images.pexels.com/photos/5668467/pexels-photo-5668467.jpeg?auto=compress&cs=tinysrgb&w=1920"
                 alt="Law office consultation"
                 className="rounded-lg shadow-professional-lg w-full h-auto hover-lift"
               />

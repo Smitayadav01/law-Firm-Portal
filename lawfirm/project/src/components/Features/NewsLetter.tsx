@@ -16,7 +16,6 @@ const Newsletter: React.FC = () => {
   const interests = [
     'Legal Updates',
     'Case Studies',
-    'Industry News',
     'Legal Tips',
     'Regulatory Changes'
   ];

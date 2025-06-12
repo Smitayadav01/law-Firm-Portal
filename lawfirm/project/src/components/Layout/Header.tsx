@@ -29,6 +29,7 @@ const Header: React.FC = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Practice Areas', href: '/practice-areas' },
+    { name: 'Team', href: '/team' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -50,9 +51,6 @@ const Header: React.FC = () => {
                   scrolled ? 'text-navy' : 'text-white'
                 }`}>
                   Seema Vishwakarma & Associates
-                </span>
-                <span className="text-gold text-xs md:text-sm font-medium">
-                  M.Com., L.L.B. - High Court Advocates
                 </span>
               </div>
             </div>

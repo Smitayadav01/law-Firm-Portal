@@ -8,6 +8,8 @@
     --navy-light: 15 23% 25%;
     --gold: 45 100% 51%; /* Professional gold */
     --gold-light: 45 100% 65%;
+    --peacock: 180 100% 25%; /* Peacock green */
+    --peacock-light: 180 100% 35%;
     --accent: 0 59% 40%; /* Dark red accent */
     --accent-light: 0 59% 50%;
     --success: 142 72% 29%;
@@ -24,7 +26,7 @@
   }
 
   body {
-    @apply bg-white text-gray-800 font-sans;
+    @apply bg-peacock text-gray-800 font-sans;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -109,6 +111,14 @@
     color: hsl(var(--gold-light));
   }
 
+  .text-peacock {
+    color: hsl(var(--peacock));
+  }
+
+  .text-peacock-light {
+    color: hsl(var(--peacock-light));
+  }
+
   .bg-navy {
     background-color: hsl(var(--navy));
   }
@@ -125,12 +135,24 @@
     background-color: hsl(var(--gold-light));
   }
 
+  .bg-peacock {
+    background-color: hsl(var(--peacock));
+  }
+
+  .bg-peacock-light {
+    background-color: hsl(var(--peacock-light));
+  }
+
   .border-navy {
     border-color: hsl(var(--navy));
   }
 
   .border-gold {
     border-color: hsl(var(--gold));
+  }
+
+  .border-peacock {
+    border-color: hsl(var(--peacock));
   }
 
   /* Professional gradient backgrounds */
@@ -140,6 +162,33 @@
 
   .gradient-gold {
     background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
+  }
+
+  .gradient-peacock {
+    background: linear-gradient(135deg, hsl(var(--peacock)) 0%, hsl(var(--peacock-light)) 100%);
+  }
+
+  /* Krishna Flute Underline */
+  .krishna-flute-underline {
+    position: relative;
+    display: inline-block;
+  }
+
+  .krishna-flute-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 6px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20'%3E%3Cpath d='M10 10 Q50 5 100 10 T190 10' stroke='%23FFD700' stroke-width='2' fill='none'/%3E%3Ccircle cx='20' cy='10' r='2' fill='%23FFD700'/%3E%3Ccircle cx='40' cy='9' r='1.5' fill='%23FFD700'/%3E%3Ccircle cx='60' cy='11' r='1.5' fill='%23FFD700'/%3E%3Ccircle cx='80' cy='9' r='1.5' fill='%23FFD700'/%3E%3Ccircle cx='100' cy='10' r='2' fill='%23FFD700'/%3E%3Ccircle cx='120' cy='11' r='1.5' fill='%23FFD700'/%3E%3Ccircle cx='140' cy='9' r='1.5' fill='%23FFD700'/%3E%3Ccircle cx='160' cy='10' r='1.5' fill='%23FFD700'/%3E%3Ccircle cx='180' cy='10' r='2' fill='%23FFD700'/%3E%3C/svg%3E") center/contain no-repeat;
+    animation: fluteGlow 3s ease-in-out infinite;
+  }
+
+  @keyframes fluteGlow {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
   }
 
   /* Enhanced animations */

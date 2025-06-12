@@ -12,6 +12,10 @@ export default {
           DEFAULT: 'hsl(var(--gold))',
           light: 'hsl(var(--gold-light))',
         },
+        peacock: {
+          DEFAULT: 'hsl(var(--peacock))',
+          light: 'hsl(var(--peacock-light))',
+        },
         accent: {
           DEFAULT: 'hsl(var(--accent))',
           light: 'hsl(var(--accent-light))',

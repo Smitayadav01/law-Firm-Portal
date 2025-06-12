@@ -24,8 +24,8 @@ const About: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">About Our Firm</h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">About Our Firm</h1>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Professional legal excellence with integrity and dedication to client success.
             </p>
           </motion.div>
@@ -46,8 +46,7 @@ const About: React.FC = () => {
               <div className="w-20 h-1 bg-secondary mb-6"></div>
               <p className="text-gray-600 mb-4">
                 Seema Vishwakarma & Associates is a distinguished law firm led by Advocate Seema Vishwakarma, 
-                who holds qualifications of M.Com., L.L.B. and practices as a High Court Advocate with extensive 
-                experience in various areas of law.
+                who practices as a High Court Advocate with extensive experience in various areas of law.
               </p>
               <p className="text-gray-600 mb-4">
                 Our firm is built on the foundation of providing exceptional legal services with unwavering 
@@ -79,56 +78,6 @@ const About: React.FC = () => {
                 </p>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Qualifications & Expertise */}
-      <section className="py-16 bg-gray-50">
-        <div className="container-custom">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-3xl font-bold mb-4">Professional Qualifications</h2>
-            <div className="w-20 h-1 bg-secondary mx-auto mb-6"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our firm is led by qualified professionals with strong academic background and practical experience.
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "M.Com.",
-                icon: <BookOpen className="h-12 w-12 text-secondary mb-4" />,
-                description: "Master of Commerce degree providing strong foundation in business and commercial law understanding."
-              },
-              {
-                title: "L.L.B.",
-                icon: <Gavel className="h-12 w-12 text-secondary mb-4" />,
-                description: "Bachelor of Laws degree with comprehensive legal education and jurisprudence knowledge."
-              },
-              {
-                title: "High Court Practice",
-                icon: <Scale className="h-12 w-12 text-secondary mb-4" />,
-                description: "Authorized to practice before High Court with expertise in complex legal matters and appellate procedures."
-              }
-            ].map((qualification, index) => (
-              <motion.div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-md text-center"
-                {...fadeInUp}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="flex justify-center">{qualification.icon}</div>
-                <h3 className="text-xl font-bold mb-2">{qualification.title}</h3>
-                <p className="text-gray-600">{qualification.description}</p>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
@@ -250,12 +199,12 @@ const About: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold text-black mb-4">Schedule Your Legal Consultation</h2>
-              <p className="text-gray-600 mb-8">
+              <h2 className="text-3xl font-bold text-white mb-4">Schedule Your Legal Consultation</h2>
+              <p className="text-gray-300 mb-8">
                 Contact us today to discuss your legal needs and discover how our experienced team can assist you 
                 in achieving your objectives with professional excellence.
               </p>
-              <Link to="/contact" className="btn bg-secondary hover:bg-secondary-light text-black">
+              <Link to="/contact" className="btn bg-secondary hover:bg-secondary-light text-white">
                 Contact Us Today
               </Link>
             </motion.div>

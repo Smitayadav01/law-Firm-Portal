@@ -26,12 +26,12 @@ const FAQ: React.FC = () => {
       answer: "Please bring: 1) Valid photo ID (Aadhaar, PAN, Passport), 2) All relevant documents related to your case, 3) Previous legal correspondence if any, 4) Property documents (for property matters), 5) Financial documents (for corporate/financial matters), 6) Any court notices or legal papers received. We recommend organizing documents chronologically for better case assessment.",
       category: "Consultation"
     },
-    {
-      id: 3,
-      question: "How much do you charge for a first consultation?",
-      answer: "Our consultation fees vary based on the complexity of the matter. Initial consultations typically range from ₹2,000 to ₹5,000. For detailed fee structure, please contact us directly as fees may vary based on the specific legal area and case complexity. We offer transparent pricing with no hidden charges.",
-      category: "Fees"
-    },
+    // {
+    //   id: 3,
+    //   question: "How much do you charge for a first consultation?",
+    //   answer: "Our consultation fees vary based on the complexity of the matter. Initial consultations typically range from ₹2,000 to ₹5,000. For detailed fee structure, please contact us directly as fees may vary based on the specific legal area and case complexity. We offer transparent pricing with no hidden charges.",
+    //   category: "Fees"
+    // },
     {
       id: 4,
       question: "What areas of law do you practice?",
@@ -41,7 +41,7 @@ const FAQ: React.FC = () => {
     {
       id: 5,
       question: "How long does a typical case take to resolve?",
-      answer: "Case duration varies significantly based on complexity, court schedules, and case type. Simple documentation may take 2-4 weeks, property matters 3-6 months, while complex litigation can take 1-3 years. We provide realistic timelines during consultation and keep clients updated on progress.",
+      answer: "Case duration varies significantly based on complexity, court schedules, and case type.",
       category: "Process"
     },
     {
@@ -53,7 +53,7 @@ const FAQ: React.FC = () => {
     {
       id: 7,
       question: "What is your fee structure for ongoing cases?",
-      answer: "Our fees depend on case complexity, time involvement, and court appearances required. We offer various payment structures: fixed fees for specific services, hourly rates for consultations, and retainer arrangements for ongoing matters. All fee agreements are documented clearly before proceeding.",
+      answer: "Our fees depend on case complexity, time involvement, and court appearances required. We offer various payment structures: fixed fees for specific services, hourly rates for consultations, and retainer arrangements for ongoing matters.",
       category: "Fees"
     },
     {
@@ -77,7 +77,7 @@ const FAQ: React.FC = () => {
     {
       id: 11,
       question: "How do you ensure confidentiality?",
-      answer: "Client confidentiality is paramount. We maintain strict attorney-client privilege, secure document storage, confidential communication channels, and limited access to case information. All staff members are bound by confidentiality agreements.",
+      answer: "Client confidentiality is paramount. We maintain strict attorney-client privilege, secure document storage, confidential communication channels, and limited access to case information to respective clients.",
       category: "Process"
     },
     {

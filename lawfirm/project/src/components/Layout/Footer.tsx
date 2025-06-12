@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
                 <Clock size={18} className="mt-1 mr-3 flex-shrink-0 text-gold" />
                 <div className="text-gray-300 text-sm">
                   <p className="font-medium text-white mb-1">Business Hours</p>
-                  <p>Monday - Saturday<br />9:00 AM - 7:00 PM</p>
+                  <p>Monday - Saturday<br />6:30 AM - 9:00 PM</p>
                 </div>
               </li>
             </ul>

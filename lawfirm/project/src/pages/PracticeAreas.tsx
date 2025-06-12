@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BarChart3, Scale, Award, Users, Briefcase, Book, Building, FileText } from 'lucide-react';
+import { Scale, Shield, Users, Home, Briefcase, FileText, Gavel, Building } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const PracticeAreas: React.FC = () => {
@@ -14,106 +14,119 @@ const PracticeAreas: React.FC = () => {
   const practiceAreas = [
     {
       id: 1,
-      title: "Corporate Law",
-      icon: <BarChart3 className="h-16 w-16 text-secondary mb-4" />,
-      description: "Our corporate law practice provides comprehensive legal services to businesses of all sizes, from startups to multinational corporations.",
+      title: "Criminal Law",
+      icon: <Gavel className="h-16 w-16 text-secondary mb-4" />,
+      description: "Expert criminal defense representation with strategic approach to protect your rights and interests.",
       services: [
-        "Corporate governance and compliance",
-        "Corporate restructuring",
-        "Joint ventures and strategic alliances",
-        "Private equity and venture capital",
-        "Corporate secretarial services"
+        "Criminal defense and representation",
+        "Bail applications and procedures",
+        "Criminal appeals and revisions",
+        "White-collar crime defense",
+        "Investigation and evidence analysis"
       ]
     },
     {
       id: 2,
-      title: "Dispute Resolution",
-      icon: <Scale className="h-16 w-16 text-secondary mb-4" />,
-      description: "Our dispute resolution team has extensive experience in representing clients in litigation, arbitration, and alternative dispute resolution proceedings.",
+      title: "Family Law",
+      icon: <Users className="h-16 w-16 text-secondary mb-4" />,
+      description: "Sensitive and professional handling of family matters with focus on amicable resolutions.",
       services: [
-        "Commercial litigation",
-        "International arbitration",
-        "Mediation and negotiation",
-        "White-collar crime defense",
-        "Regulatory investigations"
+        "Divorce and separation proceedings",
+        "Child custody and visitation rights",
+        "Matrimonial disputes and settlements",
+        "Maintenance and alimony matters",
+        "Adoption and guardianship"
       ]
     },
     {
       id: 3,
-      title: "Banking & Finance",
-      icon: <Award className="h-16 w-16 text-secondary mb-4" />,
-      description: "We advise financial institutions, lenders, borrowers, and investors on a wide range of banking and finance matters.",
+      title: "Cyber Law",
+      icon: <Shield className="h-16 w-16 text-secondary mb-4" />,
+      description: "Expert guidance in cyber crimes, data protection, and digital legal matters in the modern age.",
       services: [
-        "Project finance",
-        "Acquisition finance",
-        "Asset finance",
-        "Financial restructuring",
-        "Banking regulation"
+        "Cyber crime investigation and defense",
+        "Data protection and privacy laws",
+        "Online fraud and identity theft",
+        "Digital evidence analysis",
+        "IT compliance and regulations"
       ]
     },
     {
       id: 4,
-      title: "Intellectual Property",
-      icon: <Book className="h-16 w-16 text-secondary mb-4" />,
-      description: "Our intellectual property practice helps clients protect, enforce, and monetize their intellectual property assets.",
+      title: "Civil Law",
+      icon: <Scale className="h-16 w-16 text-secondary mb-4" />,
+      description: "Comprehensive representation in civil matters including property disputes, contractual issues, and civil litigation.",
       services: [
-        "Patent prosecution and litigation",
-        "Trademark registration and enforcement",
-        "Copyright protection",
-        "IP licensing and transactions",
-        "Trade secrets protection"
+        "Property disputes and title matters",
+        "Contract disputes and breach of contract",
+        "Civil litigation and appeals",
+        "Injunction and restraining orders",
+        "Damages and compensation claims"
       ]
     },
     {
       id: 5,
-      title: "Mergers & Acquisitions",
-      icon: <Building className="h-16 w-16 text-secondary mb-4" />,
-      description: "We provide strategic guidance on domestic and cross-border mergers, acquisitions, joint ventures, and corporate restructurings.",
+      title: "Property Law",
+      icon: <Home className="h-16 w-16 text-secondary mb-4" />,
+      description: "Complete legal assistance for all property-related matters including transactions and disputes.",
       services: [
-        "Due diligence",
-        "Transaction structuring",
-        "Negotiation and documentation",
-        "Post-acquisition integration",
-        "Regulatory approvals"
+        "Property purchase and sale agreements",
+        "Title verification and due diligence",
+        "Property registration and documentation",
+        "Landlord-tenant disputes",
+        "Property development and construction"
       ]
     },
     {
       id: 6,
-      title: "Employment Law",
-      icon: <Users className="h-16 w-16 text-secondary mb-4" />,
-      description: "Our employment law practice advises employers and employees on all aspects of the employment relationship.",
+      title: "Corporate Law",
+      icon: <Building className="h-16 w-16 text-secondary mb-4" />,
+      description: "Business legal services to help companies navigate regulatory compliance and commercial challenges.",
       services: [
-        "Employment contracts and policies",
-        "Employee benefits and compensation",
-        "Labor relations",
-        "Employment litigation",
-        "Workplace investigations"
+        "Company incorporation and registration",
+        "Corporate compliance and governance",
+        "Commercial contracts and agreements",
+        "Business dispute resolution",
+        "Mergers and acquisitions"
       ]
     },
     {
       id: 7,
-      title: "Real Estate",
-      icon: <Building className="h-16 w-16 text-secondary mb-4" />,
-      description: "We provide comprehensive legal services for real estate transactions, development projects, and dispute resolution.",
+      title: "Consumer Protection",
+      icon: <Shield className="h-16 w-16 text-secondary mb-4" />,
+      description: "Advocacy for consumer rights and protection against unfair trade practices and deficient services.",
       services: [
-        "Property acquisitions and dispositions",
-        "Leasing transactions",
-        "Real estate development",
-        "Construction contracts",
-        "Real estate litigation"
+        "Consumer complaint filing",
+        "Deficiency in services claims",
+        "Product liability cases",
+        "Unfair trade practices",
+        "Consumer forum representation"
       ]
     },
     {
       id: 8,
-      title: "Regulatory Compliance",
-      icon: <FileText className="h-16 w-16 text-secondary mb-4" />,
-      description: "We help clients navigate complex regulatory environments and ensure compliance with applicable laws and regulations.",
+      title: "Labour & Employment",
+      icon: <Briefcase className="h-16 w-16 text-secondary mb-4" />,
+      description: "Comprehensive employment law services for both employers and employees.",
       services: [
-        "Regulatory risk assessment",
-        "Compliance program development",
-        "Regulatory investigations",
-        "Licensing and approvals",
-        "Regulatory advocacy"
+        "Employment contracts and policies",
+        "Wrongful termination cases",
+        "Workplace harassment issues",
+        "Labour dispute resolution",
+        "Industrial relations"
+      ]
+    },
+    {
+      id: 9,
+      title: "Documentation Services",
+      icon: <FileText className="h-16 w-16 text-secondary mb-4" />,
+      description: "Professional legal documentation services for various legal requirements and procedures.",
+      services: [
+        "Legal notice drafting and service",
+        "Agreement and contract drafting",
+        "Affidavit and declaration preparation",
+        "Power of attorney documentation",
+        "Legal opinion and advice"
       ]
     }
   ];
@@ -131,8 +144,8 @@ const PracticeAreas: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">Practice Areas</h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Practice Areas</h1>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Comprehensive legal solutions across diverse practice areas to meet your specific needs.
             </p>
           </motion.div>
@@ -149,14 +162,14 @@ const PracticeAreas: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-bold mb-4">Our Expertise</h2>
+            <h2 className="text-3xl font-bold mb-4">Our Legal Expertise</h2>
             <div className="w-20 h-1 bg-secondary mx-auto mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Our team of experienced attorneys provides specialized legal services across a wide range of practice areas.
+              Our experienced legal team provides specialized services across multiple practice areas with dedication and professionalism.
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {practiceAreas.map((area, index) => (
               <motion.div
                 key={area.id}
@@ -165,13 +178,13 @@ const PracticeAreas: React.FC = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <a href={`#${area.title.toLowerCase().replace(/\s+/g, '-')}`} className="block p-6 bg-gray-50 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md hover:bg-gray-100 h-full">
-                  <div className="flex items-center mb-4">
-                    <div className="mr-3 text-primary group-hover:text-secondary transition-colors">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="text-primary group-hover:text-secondary transition-colors mb-3">
                       {area.icon}
                     </div>
-                    <h3 className="text-xl font-bold">{area.title}</h3>
+                    <h3 className="text-lg font-bold mb-2">{area.title}</h3>
+                    <p className="text-gray-600 text-sm">{area.description.substring(0, 80)}...</p>
                   </div>
-                  <p className="text-gray-600">{area.description.substring(0, 100)}...</p>
                 </a>
               </motion.div>
             ))}
@@ -198,7 +211,7 @@ const PracticeAreas: React.FC = () => {
                 <h2 className="text-3xl font-bold mb-4">{area.title}</h2>
                 <div className="w-20 h-1 bg-secondary mb-6"></div>
                 <p className="text-gray-600 mb-6">{area.description}</p>
-                <h3 className="text-xl font-bold mb-4">Our Services</h3>
+                <h3 className="text-xl font-bold mb-4">Our Services Include</h3>
                 <ul className="space-y-3 mb-8">
                   {area.services.map((service, idx) => (
                     <li key={idx} className="flex items-start">
@@ -212,7 +225,7 @@ const PracticeAreas: React.FC = () => {
                   ))}
                 </ul>
                 <Link to="/contact" className="btn btn-primary">
-                  Consult with Our {area.title} Team
+                  Consult for {area.title}
                 </Link>
               </motion.div>
               
@@ -245,13 +258,13 @@ const PracticeAreas: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold text-white mb-4">Ready to Discuss Your Legal Needs?</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Need Legal Assistance?</h2>
               <p className="text-gray-300 mb-8">
-                Our team of experienced attorneys is ready to assist you with your legal challenges. 
-                Schedule a consultation today to discuss how we can help.
+                Our experienced legal team is ready to assist you with your legal challenges. 
+                Contact us today to schedule a consultation and discuss your specific requirements.
               </p>
               <Link to="/contact" className="btn bg-secondary hover:bg-secondary-light text-white">
-                Contact Us Today
+                Schedule Consultation
               </Link>
             </motion.div>
           </div>
