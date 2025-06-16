@@ -15,7 +15,6 @@ const Footer: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white">Seema Vishwakarma & Associates</h3>
-                <p className="text-gold text-sm">M.Com., L.L.B.</p>
               </div>
             </div>
             <p className="mb-4 text-gray-300 leading-relaxed">
@@ -48,12 +47,6 @@ const Footer: React.FC = () => {
                 <Link to="/practice-areas" className="text-gray-300 hover:text-gold transition-colors flex items-center">
                   <span className="w-2 h-2 bg-gold rounded-full mr-2"></span>
                   Practice Areas
-                </Link>
-              </li>
-              <li>
-                <Link to="/team" className="text-gray-300 hover:text-gold transition-colors flex items-center">
-                  <span className="w-2 h-2 bg-gold rounded-full mr-2"></span>
-                  Our Team
                 </Link>
               </li>
               <li>

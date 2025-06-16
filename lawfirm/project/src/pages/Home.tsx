@@ -5,7 +5,6 @@ import { Award, BarChart3, Scale, Users, Phone, Mail, MapPin, Shield, Calendar, 
 import AppointmentBooking from '../components/Features/AppointmentBooking';
 import LiveChat from '../components/Features/LiveChat';
 import Newsletter from '../components/Features/Newsletter';
-import CaseTracker from '../components/Features/CaseTracker';
 import ClientPortal from '../components/Features/ClientPortal';
 import LegalCalculator from '../components/Features/LegalCalculator';
 import FAQ from '../components/Features/FAQ';
@@ -224,7 +223,7 @@ const Home: React.FC = () => {
             >
               <div className="relative">
                 <img
-                  src="https://images.pexels.com/photos/5668859/pexels-photo-5668859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1920"
                   alt="Law firm office"
                   className="rounded-lg shadow-professional-lg object-cover h-[500px] w-full"
                 />
@@ -242,7 +241,6 @@ const Home: React.FC = () => {
 
       {/* Advanced Features Sections */}
       <LegalCalculator />
-      <CaseTracker />
       <ClientPortal />
 
       {/* FAQ Section */}

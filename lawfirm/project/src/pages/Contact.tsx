@@ -30,8 +30,8 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-balck mb-4">Contact Us</h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Contact Us</h1>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Get in touch with our legal experts for consultation and assistance.
             </p>
           </motion.div>
@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
                       <h4 className="font-semibold mb-2">Business Hours</h4>
                       <p className="text-gray-600">
                         Monday - Saturday<br />
-                        9:00 AM - 7:00 PM
+                        6:30 AM - 9:00 PM
                       </p>
                     </div>
                   </div>

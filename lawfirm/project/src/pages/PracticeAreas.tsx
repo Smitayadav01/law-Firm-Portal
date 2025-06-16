@@ -135,7 +135,7 @@ const PracticeAreas: React.FC = () => {
     <>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-primary">
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/5668488/pexels-photo-5668488.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10')] bg-cover bg-center opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80"></div>
         <div className="container-custom relative z-10">
           <motion.div

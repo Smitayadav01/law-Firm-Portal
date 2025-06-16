@@ -33,55 +33,55 @@ const FAQ: React.FC = () => {
     //   category: "Fees"
     // },
     {
-      id: 4,
+      id: 3,
       question: "What areas of law do you practice?",
       answer: "We practice in multiple areas including Civil Law, Criminal Law, Family Law, Property Law, Corporate Law, Consumer Protection, Labour & Employment Law, and Documentation Services. Our team has extensive experience in High Court matters and complex legal cases.",
       category: "Services"
     },
     {
-      id: 5,
+      id: 4,
       question: "How long does a typical case take to resolve?",
       answer: "Case duration varies significantly based on complexity, court schedules, and case type.",
       category: "Process"
     },
     {
-      id: 6,
+      id: 5,
       question: "Do you handle cases outside Mumbai?",
       answer: "Yes, as High Court Advocates, we can represent clients in various courts across Maharashtra. For cases in other states, we collaborate with local advocates or can appear through proper legal procedures. We assess each case individually to determine the best approach.",
       category: "Services"
     },
     {
-      id: 7,
+      id: 6,
       question: "What is your fee structure for ongoing cases?",
       answer: "Our fees depend on case complexity, time involvement, and court appearances required. We offer various payment structures: fixed fees for specific services, hourly rates for consultations, and retainer arrangements for ongoing matters.",
       category: "Fees"
     },
     {
-      id: 8,
+      id: 7,
       question: "Can I track the progress of my case?",
       answer: "Yes, we provide regular updates through phone calls, emails, and our client portal system. You'll receive updates after each court hearing, significant developments, and document filings. We believe in transparent communication throughout the legal process.",
       category: "Process"
     },
     {
-      id: 9,
+      id: 8,
       question: "Do you provide emergency legal services?",
       answer: "Yes, we understand legal emergencies can arise. For urgent matters like arrests, urgent injunctions, or time-sensitive legal issues, please call us immediately. We strive to provide prompt assistance for genuine emergency situations.",
       category: "Services"
     },
     {
-      id: 10,
+      id: 9,
       question: "What languages do you communicate in?",
       answer: "We communicate fluently in English, Hindi, and Marathi. This helps us serve a diverse client base and ensures clear communication throughout the legal process. All legal documents are prepared in the appropriate language as required by law.",
       category: "Services"
     },
     {
-      id: 11,
+      id: 10,
       question: "How do you ensure confidentiality?",
       answer: "Client confidentiality is paramount. We maintain strict attorney-client privilege, secure document storage, confidential communication channels, and limited access to case information to respective clients.",
       category: "Process"
     },
     {
-      id: 12,
+      id: 11,
       question: "What payment methods do you accept?",
       answer: "We accept various payment methods including cash, cheque, bank transfer (NEFT/RTGS), UPI payments, and credit/debit cards. For larger amounts, we prefer bank transfers. Payment receipts are provided for all transactions.",
       category: "Fees"
