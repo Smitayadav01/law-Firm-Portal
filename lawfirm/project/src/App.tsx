@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import PracticeAreas from './pages/PracticeAreas';
 import Contact from './pages/Contact';
+import BlogDetail from './pages/BlogDetail';
 
 function App() {
   return (

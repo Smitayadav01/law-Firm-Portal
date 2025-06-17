@@ -8,6 +8,7 @@ import Newsletter from '../components/Features/Newsletter';
 import ClientPortal from '../components/Features/ClientPortal';
 import LegalCalculator from '../components/Features/LegalCalculator';
 import FAQ from '../components/Features/FAQ';
+import BlogSection from '../components/Features/BlogSection';
 
 const Home: React.FC = () => {
   const [isAppointmentModalOpen, setIsAppointmentModalOpen] = useState(false);
@@ -245,7 +246,9 @@ const Home: React.FC = () => {
 
       {/* FAQ Section */}
       <FAQ />
+      {/* BlogSection */}
 
+      <BlogSection />
       {/* Location & Contact */}
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
