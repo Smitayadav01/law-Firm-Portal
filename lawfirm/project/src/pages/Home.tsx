@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Award, BarChart3, Scale, Users, Phone, Mail, MapPin, Shield, Calendar, Clock, Globe } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import AppointmentBooking from '../components/Features/AppointmentBooking';
 import LiveChat from '../components/Features/LiveChat';
 import Newsletter from '../components/Features/Newsletter';
@@ -11,6 +12,14 @@ import FAQ from '../components/Features/FAQ';
 import BlogSection from '../components/Features/BlogSection';
 
 const Home: React.FC = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const loggedIn = localStorage.getItem('loggedIn');
+    if (loggedIn !== 'true') {
+      navigate('/login');
+    }
+  }, [navigate]);
   const [isAppointmentModalOpen, setIsAppointmentModalOpen] = useState(false);
 
   const fadeInUp = {
@@ -26,6 +35,7 @@ const Home: React.FC = () => {
       }
     }
   };
+  
 
   return (
     <>

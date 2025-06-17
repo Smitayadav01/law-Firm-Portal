@@ -9,32 +9,58 @@ type BlogPost = {
   author?: string;
 };
 
-const blogPosts: BlogPost[] = [
+export const blogData: BlogPost[] = [
   {
     id: 1,
-    title: "Understanding Corporate Law in India",
-    summary: "An introduction to corporate law principles applicable to Indian businesses...",
-    fullContent: "This article dives deep into the nuances of corporate law in India, including the role of SEBI, ROC compliance, board structures, and the Companies Act 2013...",
-    date: "June 15, 2025",
-    author: "Adv. R. Mehta"
+    title: "Basics of Criminal Law in India",
+    summary: "Explore the foundation of criminal law, from FIRs to trials and bail procedures.",
+    fullContent:
+      "Criminal law in India governs crimes like theft, assault, and fraud. This blog outlines the lifecycle of a criminal case — from filing an FIR, police investigation, charge sheet, and trial — and explains key provisions under the Indian Penal Code (IPC) and Criminal Procedure Code (CrPC).",
+    date: "2025-06-17",
+    author: "Adv. R. Bhatia",
   },
   {
     id: 2,
-    title: "How to Choose the Right Lawyer for Your Case",
-    summary: "Key tips and factors to keep in mind while selecting your legal representation.",
-    fullContent: "Choosing a lawyer involves assessing their specialization, experience, track record, and compatibility. This guide breaks it down step-by-step to help you make the right choice...",
-    date: "June 10, 2025",
-    author: "Adv. K. Sharma"
+    title: "Understanding Family Law: Marriage, Divorce & Custody",
+    summary:
+      "A guide to the legal framework governing personal relationships in India.",
+    fullContent:
+      "Family law in India deals with marriage, divorce, child custody, and inheritance. This article explores the Hindu Marriage Act, Special Marriage Act, and relevant sections on domestic violence, maintenance, and guardianship. Know your rights and remedies.",
+    date: "2025-06-14",
+    author: "Adv. A. Sinha",
   },
   {
     id: 3,
+    title: "Understanding Civil Law in India",
+    summary:
+      "An overview of civil law procedures and how clients can navigate legal cases effectively.",
+    fullContent:
+      "Civil law covers disputes between individuals or organizations over rights and obligations. Learn how to file a civil suit, steps in civil litigation, and remedies like injunctions, compensation, and specific performance.",
+    date: "2024-12-01",
+    author: "Adv. Seema Vishwakarma",
+  },
+  {
+    id: 4,
+    title: "How to Choose the Right Lawyer for Your Case",
+    summary:
+      "Key tips and factors to keep in mind while selecting legal counsel.",
+    fullContent:
+      "Whether it's a civil case, criminal defense, or a property dispute, finding the right lawyer is crucial. This blog guides you through evaluating a lawyer’s specialization, client reviews, consultation approach, and fee structure.",
+    date: "2025-06-10",
+    author: "Adv. K. Sharma",
+  },
+  {
+    id: 5,
     title: "Recent Changes in Property Law",
-    summary: "Latest updates on amendments to property laws impacting buyers and sellers.",
-    fullContent: "The 2025 property law amendment redefines registration norms, stamp duty rebates, and introduces new safeguards for homebuyers. Here’s everything you need to know...",
-    date: "June 5, 2025",
-    author: "Adv. S. Patel"
-  }
+    summary:
+      "Latest legal updates impacting buyers, sellers, and real estate investors.",
+    fullContent:
+      "The 2025 property law amendment introduces digital property verification, new buyer protections, and updated stamp duty rules. Learn how these changes affect transactions, disputes, and property registration.",
+    date: "2025-06-05",
+    author: "Adv. S. Patel",
+  },
 ];
+
 
 const BlogSection: React.FC = () => {
   const [expandedBlogId, setExpandedBlogId] = useState<number | null>(null);
@@ -51,22 +77,22 @@ const BlogSection: React.FC = () => {
           <div style={styles.underline}></div>
         </div>
         <div style={styles.postsContainer}>
-          {blogPosts.map(post => (
-            <div key={post.id} style={styles.postCard}>
-              <h3 style={styles.postTitle}>{post.title}</h3>
-              <p style={styles.summary}>{post.summary}</p>
-              <small style={styles.meta}>{post.author} | {post.date}</small>
+              {blogData.map(post => (
+               <div key={post.id} style={styles.postCard}>
+                 <h3 style={styles.postTitle}>{post.title}</h3>
+                  <p style={styles.summary}>{post.summary}</p>
+                   <small style={styles.meta}>{post.author} | {post.date}</small>
 
-              {expandedBlogId === post.id && (
-                <p style={styles.fullContent}>{post.fullContent}</p>
-              )}
+                  {expandedBlogId === post.id && (
+                   <p style={styles.fullContent}>{post.fullContent}</p>
+                 )}
 
-              <button onClick={() => toggleExpand(post.id)} style={styles.readMore}>
+                   <button onClick={() => toggleExpand(post.id)} style={styles.readMore}>
                 {expandedBlogId === post.id ? 'Read Less' : 'Read More →'}
-              </button>
-            </div>
-          ))}
+           </button>
         </div>
+       ))}
+      </div>
       </div>
     </section>
   );

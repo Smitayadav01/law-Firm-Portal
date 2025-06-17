@@ -2,12 +2,9 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Outlet } from 'react-router-dom'; // ✅ important import
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -19,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
         >
-          {children}
+          <Outlet /> {/* ✅ this renders the nested page */}
         </motion.main>
       </AnimatePresence>
       <Footer />

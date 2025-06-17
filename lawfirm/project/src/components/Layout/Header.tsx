@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Scale } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -7,20 +7,26 @@ const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  
+  const navigate = useNavigate();
+
   const toggleMenu = () => setIsOpen(!isOpen);
-  
+
+  const handleLogout = () => {
+    localStorage.removeItem('user'); // Replace 'user' with your actual auth key if needed
+    navigate('/login');
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
+
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
@@ -54,7 +60,7 @@ const Header: React.FC = () => {
               </div>
             </div>
           </Link>
-          
+
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
               <Link
@@ -73,16 +79,22 @@ const Header: React.FC = () => {
               </Link>
             ))}
           </nav>
-          
-          <div className="hidden md:block">
+
+          <div className="hidden md:flex items-center space-x-4">
             <Link
               to="/contact"
               className="btn bg-gold hover:bg-gold-light text-white"
             >
               Contact Us
             </Link>
+            <button
+              onClick={handleLogout}
+              className="btn bg-red-500 hover:bg-red-600 text-white"
+            >
+              Logout
+            </button>
           </div>
-          
+
           <div className="md:hidden">
             <button
               type="button"
@@ -100,7 +112,7 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-      
+
       {isOpen && (
         <motion.div 
           className="md:hidden"
@@ -125,10 +137,16 @@ const Header: React.FC = () => {
             ))}
             <Link
               to="/contact"
-              className="block w-full text-center px-3 py-2 rounded-md text-base font-medium btn bg-gold hover:bg-gold-light text-white mt-4"
+              className="block w-full text-center px-3 py-2 rounded-md text-base font-medium btn bg-gold hover:bg-gold-light text-white mt-2"
             >
               Contact Us
             </Link>
+            <button
+              onClick={handleLogout}
+              className="block w-full text-center px-3 py-2 rounded-md text-base font-medium bg-red-500 hover:bg-red-600 text-white"
+            >
+              Logout
+            </button>
           </div>
         </motion.div>
       )}
